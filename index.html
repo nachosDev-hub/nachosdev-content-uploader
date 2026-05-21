@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — nachosDev Content Uploader</title>
+<meta name="robots" content="index, follow">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e3e3e3; padding-bottom: 0.3rem; }
+  .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #d8d8d8; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  code { background: #f0f0f0; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.9em; }
+  a { color: #1558d6; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #888; border-top: 1px solid #e3e3e3; padding-top: 1rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #161616; }
+    h2 { border-color: #333; }
+    th, td { border-color: #383838; }
+    th { background: #222; }
+    code { background: #2a2a2a; }
+    a { color: #6ea8fe; }
+    footer { border-color: #333; }
+    .meta { color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — nachosDev Content Uploader</h1>
+<p class="meta"><strong>Effective date:</strong> 2026-05-22 &nbsp;·&nbsp; <strong>Last updated:</strong> 2026-05-22</p>
+
+<h2>1. Who we are</h2>
+<p>This application ("the App") is a personal content-publishing tool operated by
+<strong>nachosDev</strong> (<code>@nachosDev</code>), an independent short-form video creator.
+The App is <strong>not</strong> a multi-user product, a website, or a service offered to the
+public. It is a private command-line utility used solely by its operator to send the
+operator's own videos to the operator's own TikTok account.</p>
+
+<h2>2. What the App does</h2>
+<p>The App connects to a single TikTok account — the operator's own — through the official
+<strong>TikTok Content Posting API</strong>, using the <code>video.upload</code> permission.
+Its only function is to transfer finished video files from the operator's computer into that
+same account's TikTok inbox/drafts, where the operator then reviews and publishes them
+manually inside the TikTok app.</p>
+<p>The App does <strong>not</strong> post publicly on its own, does <strong>not</strong> operate
+on any account other than the operator's, and is <strong>not</strong> available to other users.</p>
+
+<h2>3. Information the App accesses</h2>
+<p>When the operator authorizes the App with TikTok, the App receives and uses the following,
+strictly to perform the upload:</p>
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th><th>Source</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>OAuth access token &amp; refresh token</td><td>Authenticate API calls on the operator's behalf</td><td>TikTok OAuth</td></tr>
+    <tr><td>TikTok user identifier (<code>open_id</code>)</td><td>Required field for the upload API request</td><td>TikTok OAuth</td></tr>
+    <tr><td>Granted scope (<code>video.upload</code>)</td><td>Confirm the App has permission to upload</td><td>TikTok OAuth</td></tr>
+    <tr><td>Video files</td><td>The content being uploaded</td><td>Created locally by the operator</td></tr>
+  </tbody>
+</table>
+<p>The App requests <strong>no other permissions</strong>. It does not read the operator's
+followers, profile details, analytics, messages, comments, or any other account data. It
+collects <strong>no information from any other person</strong>.</p>
+
+<h2>4. How information is used</h2>
+<p>Accessed information is used for one purpose only: to upload the operator's own video files
+to the operator's own TikTok inbox via the Content Posting API. There is no other processing.</p>
+
+<h2>5. How information is stored</h2>
+<ul>
+  <li>OAuth tokens are stored <strong>only on the operator's local computer</strong>, in a single
+  permission-restricted file (<code>.tiktok_token.json</code>). They are never transmitted
+  anywhere except to TikTok's official API endpoints.</li>
+  <li>Video files remain on the operator's local computer.</li>
+  <li>The App runs no server, no database, and no cloud storage. There is no remote system that
+  holds any data.</li>
+</ul>
+
+<h2>6. Information sharing</h2>
+<p>We <strong>do not</strong> sell, rent, trade, or share any accessed information with any third
+party. Data flows only between the operator's own computer and TikTok's official API. No
+advertising networks, analytics providers, or data brokers are involved.</p>
+
+<h2>7. Data retention and deletion</h2>
+<ul>
+  <li>OAuth tokens persist locally only until they expire or are deleted. The operator can delete
+  them at any time by removing the local token file.</li>
+  <li>The operator can revoke the App's access at any time from
+  <strong>TikTok → Settings → Security &amp; permissions → Apps and websites</strong>. Revoking
+  access immediately invalidates all stored tokens.</li>
+  <li>Because no data leaves the operator's computer, deleting the local files constitutes
+  complete deletion.</li>
+</ul>
+
+<h2>8. Security</h2>
+<p>OAuth authorization uses the PKCE extension. The token file is created with restricted file
+permissions. All network communication with TikTok uses HTTPS. The App contains no hardcoded
+credentials.</p>
+
+<h2>9. Children's privacy</h2>
+<p>The App is a private creator tool and is not directed to children. It does not knowingly
+collect any information from anyone under 13 (or the applicable minimum age in the operator's
+jurisdiction).</p>
+
+<h2>10. Changes to this policy</h2>
+<p>If this policy changes, the updated version will be posted at this same URL with a revised
+"Last updated" date.</p>
+
+<h2>11. Contact</h2>
+<p>Questions about this privacy policy can be sent to:
+<a href="mailto:popvaganza.info@gmail.com">popvaganza.info@gmail.com</a></p>
+
+<footer>
+Privacy policy for the nachosDev Content Uploader command-line tool. This page is published
+solely to satisfy the TikTok Content Posting API privacy-policy requirement.
+</footer>
+
+</body>
+</html>
